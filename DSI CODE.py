@@ -21,7 +21,7 @@ print('info:',us.info())
 
 print(us.head())
 print(us.tail())
-print(us.null())
+print(us.isnull().sum())
 print(       )
 print(us.describe())
 print(us.duplicated().sum())
@@ -203,4 +203,5 @@ for name,model in models.items():
     
 results_us=pd.DataFrame(results,index=['MAE','RMSE','R²']).T
 print('the table:','\n', results_us)
+
 
