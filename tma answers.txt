@@ -1,0 +1,46 @@
+
+ANSWERS
+
+#PART A Q2 observations :
+
+My 3 Observations about the visualized data: 
+First observation: 
+There is a clear negative relationship between the CO2 emissions and the DSI (district sustainability index). Meaning that the relationship is (reciprocal), when the levels on cO2 emissions increase the DSI score decrease and vice versa. This makes sense environmentally since districts with high levels of CO2 emissions are often associated with poor air quality and higher pollution levels. according to the (correlation heatmap), (pair plot map) and (scatter plot)
+
+
+Second observation:
+There is a high degree of connection between those indicators >> (CO2 emission levels) and (Traffic index). Districts with heavier traffic tend to produce high levels of CO2 emissions in the air. According to the (correlation heatmap) and (pair plot map). 
+
+
+Third observation:
+Green area per capita m2 and the DSI score have a high correlation degree, the more green areas the district have the higher the DSI score is. In an environmental context, the greener the district is the better the quality of the air is.
+
+
+
+#PART B Q3: compare the effects on variance: 
+
+Mean Fill: reduces the variance of the feature because all missing values are replaced by the same constant (the mean of the values) because; using one repeated value decreases spread. Good for categorial data.
+
+Median Fill: reduces variance, but usually less aggressively than mean fill.
+Because the median is resistant to outliers, replacing missing values with the median distorts the distribution less than replacing them with the mean. Meaning it's more subtle than mean fill.
+
+Predictive Imputation: preserves variance better than mean or median. This is because the missing values are predicted based on relationships with other features, so the imputed values vary instead of being single repeated number. It follows the natural flow of the data so variability stays realistic. 
+
+
+#PART B Q4: why the added features improve interpretability :
+
+first feature (CO2_per_traffic): this feature improves interpretability by showing that the CO2 emissions have higher levels when the traffic is denser in that districts, so it gives an answer to the question: why is the air polluted in that district. It also shows that the main reason to high CO2 emissions is traffic, while it could be other effects but, the relationship between those two indexes are the most correlated. 
+
+second feature (recycling_per_denisty):this feature normalizes environmental behavior relative to population pressure. This shows that the recycling activity depends on the environmental awareness of the community living in that district not the population density. It reveals true environmental performance that is not obvious in the raw data. As  a result it shows if district recycling efficiency is genuinely high or reflected by the population density.
+
+
+
+
+#PART C Q8: (results interpretation)
+Through the comparing the models evaluation measurements results, we can see that the linear regression model got the smallest values in both MAE and RMSE, which means that it had the most correct predictions of the DSI score and almost perfect R-squared score meaning it explains a larger portion of the variance in the target variable. second to model to the best model is the Ensemble Extension of the Random Forest model, it has low MAE and RMSE scores meaning that the predictions were accurate however the Gradient Boosting outperformed the Random Forest model by achieving a higher R-squared score. Suggesting that the Gradient Boosting model explains more variance in the target variable. The Decision Tree model comes in third place with higher MAE and RMSE values meaning less accurate predictions and a lower R-squared score. In last place comes SVM with the least true predictions having the highest RMSE and MAE scores and the lowest R-squared score.
+
+
+
+
+
+
