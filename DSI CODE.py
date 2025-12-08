@@ -21,13 +21,13 @@ print('info:',us.info())
 
 print(us.head())
 print(us.tail())
-#print(us.null())
+print(us.null())
 print(       )
 print(us.describe())
 print(us.duplicated().sum())
 
 
-
+#b                             ======================= Question 2=========================
 #PART A Q2: scatter and histomap
 plt.figure(figsize=(7, 5))
 sns.scatterplot(x='DSI_target_0_100', y='CO2_emission_kilotons', data=us)
@@ -55,7 +55,7 @@ plt.show()
 sns.pairplot(numeric_us)
 plt.suptitle('Pair Plot of Dataset Features', y=1.02)
 plt.show()
-
+#                    ===================================== Question 3=======================================
 #PART B Q3: filling the missing values & data cleansing (mode and median fill)
 us=us.dropna(thresh=us.shape[1]*0.50)
 for col in us.columns:
@@ -64,14 +64,14 @@ for col in us.columns:
     else:
         us[col]=us[col].fillna(us[col].median())
         
-
+#                    ===================================== Question 4 =======================================
 #PART B Q4: two derived features:
 us['CO2_per_traffic']=us['Traffic_index_0_100']/ us['CO2_emission_kilotons']
 us['recycling_per_denisty']=us['Waste_recycling_rate_pct']/us['Population_density_people_per_km2']*10
 us.head()
 
 
-#                                 ======================================================================================
+#                    ===================================== Question 5 =======================================
 #PART B Q5: feature scaling
 #(splitting the data into two halves)
 
@@ -171,7 +171,7 @@ plt.ylabel=('PCA2')
 plt.title=('PCA visualization')
 print('PCA visulization')
 plt.show()
-
+#              ===================================== Question 6, 7, 8 =======================================
 #PART C Q6 & Q7 & Q8: Model Training / Ensemble /Evalution :
 #model training 
 target = 'DSI_target_0_100'
@@ -203,3 +203,4 @@ for name,model in models.items():
     
 results_us=pd.DataFrame(results,index=['MAE','RMSE','R²']).T
 print('the table:','\n', results_us)
+
