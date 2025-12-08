@@ -1,0 +1,173 @@
+the output:
+shape: (1020, 9)
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1020 entries, 0 to 1019
+Data columns (total 9 columns):
+ #   Column                                        Non-Null Count  Dtype  
+---  ------                                        --------------  -----  
+ 0   district_id                                   965 non-null    object 
+ 1   district_name                                 968 non-null    object 
+ 2   CO2_emission_kilotons                         977 non-null    float64
+ 3   Average_energy_consumption_kWh_per_household  967 non-null    float64
+ 4   Green_area_per_capita_m2                      960 non-null    float64
+ 5   Waste_recycling_rate_pct                      966 non-null    float64
+ 6   Population_density_people_per_km2             964 non-null    float64
+ 7   Traffic_index_0_100                           951 non-null    float64
+ 8   DSI_target_0_100                              964 non-null    float64
+dtypes: float64(7), object(2)
+memory usage: 71.8+ KB
+info: None
+  district_id district_name  CO2_emission_kilotons  \
+0        D524  District_524                1154.60   
+1        D603  District_603                 286.76   
+2        D527  District_527                 861.63   
+3        D032  District_032                 287.53   
+4        D617  District_617                  83.49   
+
+   Average_energy_consumption_kWh_per_household  Green_area_per_capita_m2  \
+0                                       10771.2                      6.85   
+1                                           NaN                     32.78   
+2                                       10140.8                     16.31   
+3                                        7300.5                     42.34   
+4                                        6403.1                     34.81   
+
+   Waste_recycling_rate_pct  Population_density_people_per_km2  \
+0                      32.3                             1363.8   
+1                      36.7                              143.0   
+2                      20.4                             1769.3   
+3                      43.4                                NaN   
+4                      46.0                              145.7   
+
+   Traffic_index_0_100  DSI_target_0_100  
+0                  NaN             25.50  
+1                  NaN             65.37  
+2                 61.5             34.42  
+3                 52.2             71.68  
+4                 24.9             76.69  
+     district_id district_name  CO2_emission_kilotons  \
+1015        D107  District_107                 278.54   
+1016        D271  District_271                 640.15   
+1017        D861  District_861                1043.29   
+1018        D436           NaN                 489.09   
+1019        D103  District_103                 531.45   
+
+      Average_energy_consumption_kWh_per_household  Green_area_per_capita_m2  \
+1015                                        7677.2                     41.86   
+1016                                        8375.2                     34.52   
+1017                                        9210.5                     15.70   
+1018                                        7547.0                     24.86   
+1019                                        8969.1                     32.20   
+
+      Waste_recycling_rate_pct  Population_density_people_per_km2  \
+1015                      44.7                               88.1   
+1016                      21.6                             1960.1   
+1017                      42.2                             1000.4   
+1018                      44.8                              154.0   
+1019                      40.4                              283.3   
+
+      Traffic_index_0_100  DSI_target_0_100  
+1015                 41.1             73.03  
+1016                 46.9             53.71  
+1017                  NaN             41.01  
+1018                 45.3             62.93  
+1019                  NaN             59.08  
+district_id                                     55
+district_name                                   52
+CO2_emission_kilotons                           43
+Average_energy_consumption_kWh_per_household    53
+Green_area_per_capita_m2                        60
+Waste_recycling_rate_pct                        54
+Population_density_people_per_km2               56
+Traffic_index_0_100                             69
+DSI_target_0_100                                56
+dtype: int64
+
+       CO2_emission_kilotons  Average_energy_consumption_kWh_per_household  \
+count             977.000000                                    967.000000   
+mean              630.628802                                   8568.968769   
+std               258.210687                                   1438.028449   
+min                20.000000                                   3809.500000   
+25%               464.250000                                   7582.750000   
+50%               627.160000                                   8559.200000   
+75%               809.120000                                   9442.650000   
+max              1440.280000                                  12894.800000   
+
+       Green_area_per_capita_m2  Waste_recycling_rate_pct  \
+count                960.000000                966.000000   
+mean                  29.261990                 39.743685   
+std                    8.384769                  9.111597   
+min                    3.120000                  6.100000   
+25%                   23.395000                 33.900000   
+50%                   29.240000                 39.800000   
+75%                   34.787500                 45.900000   
+max                   55.810000                 68.700000   
+
+       Population_density_people_per_km2  Traffic_index_0_100  \
+count                         964.000000           951.000000   
+mean                          637.264212            55.401998   
+std                           695.176621            19.845086   
+min                            80.000000             5.000000   
+25%                           228.325000            42.750000   
+50%                           414.750000            55.400000   
+75%                           769.100000            68.200000   
+max                          7511.400000            95.000000   
+
+       DSI_target_0_100  
+count        964.000000  
+mean          55.067438  
+std           12.929649  
+min           13.100000  
+25%           46.742500  
+50%           55.490000  
+75%           63.612500  
+max           92.590000  
+20
+
+
+
+
+
+Final dataset shape = (1020, 11)
+  district_id district_name  CO2_emission_kilotons  \
+0        D016  District_016              -0.043541   
+1        D636  District_636              -0.341562   
+2        D775  District_775              -0.728510   
+3        D694  District_694              -0.964161   
+4        D128  District_128              -0.652074   
+
+   Average_energy_consumption_kWh_per_household  Green_area_per_capita_m2  \
+0                                      0.137381                  0.631573   
+1                                     -0.129922                  0.585522   
+2                                     -0.992501                  0.455636   
+3                                     -0.068488                  0.590245   
+4                                     -0.148707                  0.217118   
+
+   Waste_recycling_rate_pct  Population_density_people_per_km2  \
+0                  0.570180                          -0.195396   
+1                 -0.039036                           0.216133   
+2                  0.211178                          -0.299631   
+3                 -1.094286                          -0.712707   
+4                  1.353459                          -0.602595   
+
+   Traffic_index_0_100  DSI_target_0_100  CO2_per_traffic  \
+0             0.548938          0.304816        -0.019958   
+1             0.089647          0.297213        -0.030193   
+2            -0.027728          0.605912         0.105041   
+3             0.283570          0.081275         0.364183   
+4             0.155989          0.811205         0.123084   
+
+   recycling_per_denisty  
+0              -0.339229  
+1              -0.613196  
+2              -0.294396  
+3               0.282771  
+4               0.581278  
+PCA visulization
+
+the table: 
+                          MAE      RMSE        R²
+Linear Regression:  2.533882  3.989122  0.890369
+Decision Tree:      4.034902  5.826928  0.766084
+SVM:                5.286572  6.807956  0.680690
+Random Forest:      3.098471  4.362818  0.868866
+Gradient Boosting:  2.980569  4.284771  0.873516
