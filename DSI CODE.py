@@ -164,12 +164,17 @@ pca_result=pca.fit_transform(stan)
 pca_us=pd.DataFrame({'PCA_1':pca_result[:,0],'PCA_2':pca_result[:,1]})
 
 #visualization:
+pca=PCA(n_components=2)
+pca_result=pca.fit_transform(stan)
+pca_us=pd.DataFrame({'PCA_1':pca_result[:,0],'PCA_2':pca_result[:,1]})
+
+#visualization:
 plt.figure(figsize=(7,5))
 plt.scatter(pca_us['PCA_1'],pca_us['PCA_2'],color='purple',marker='s')
 plt.xlabel=('PCA1')
 plt.ylabel=('PCA2')
 plt.title=('PCA visualization')
-print('PCA visulization:')
+print('PCA visulaization:')
 plt.show()
 #              ===================================== Question 6, 7, 8 =======================================
 #PART C Q6 & Q7 & Q8: Model Training / Ensemble /Evalution :
@@ -203,7 +208,4 @@ for name,model in models.items():
     
 results_us=pd.DataFrame(results,index=['MAE','RMSE','R²']).T
 print('the table:','\n', results_us)
-
-
-
 
